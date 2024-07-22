@@ -152,6 +152,9 @@ public:
 
   bool publish(const char* topic, const uint8_t* payload, unsigned int plenght, bool retain);
   bool publish(const String &topic, const String &payload, bool retain = false);
+
+  bool enqueue(const String &topic, const String &payload, bool retain);
+  bool enqueue(const char* topic, const uint8_t* payload, unsigned int plength, bool retain);
   bool subscribe(const String &topic, MessageReceivedCallback messageReceivedCallback, uint8_t qos = 0);
   bool subscribe(const String &topic, MessageReceivedCallbackWithTopic messageReceivedCallback, uint8_t qos = 0);
   bool unsubscribe(const String &topic);   //Unsubscribes from the topic, if it exists, and removes it from the CallbackList.
