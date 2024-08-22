@@ -1,6 +1,8 @@
 #ifndef ESP_MQTT_CLIENT_H
 #define ESP_MQTT_CLIENT_H
 
+#include <Arduino.h>
+#include <WiFi.h>
 #include <ArduinoOTA.h>
 #include "mqtt_client.h"
 #include <vector>

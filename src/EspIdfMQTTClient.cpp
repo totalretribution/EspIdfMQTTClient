@@ -605,7 +605,7 @@ bool EspIdfMQTTClient::connectToMqttBroker() {
   mqtt_cfg.buffer.size = _mqttBufferSize;
 
   if (_root_ca != NULL)
-    mqtt_cfg.broker.verification.certificate = root_ca;
+    mqtt_cfg.broker.verification.certificate = _root_ca;
 
   if (_client_cert != NULL)
     mqtt_cfg.credentials.authentication.certificate = _client_cert;
